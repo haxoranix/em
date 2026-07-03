@@ -1,70 +1,84 @@
 # Elementor Hero Library MVP
 
-A static SPA prototype for a modern Elementor Free hero section library.
+A static SPA demo with 10 modern hero sections.
 
-## What is included
+## What it does
 
-- 10 hero section previews
-- Desktop, tablet, and mobile preview modal
-- Search and category filtering
-- Copy Elementor JSON button
-- Download JSON button
-- Separate JSON files in `data/elementor-json/`
-- No build step required
+- Shows responsive previews of 10 hero sections
+- Filters and searches sections
+- Copies an Elementor-style clipboard payload for **Paste from other site**
+- Downloads a normal Elementor JSON template as fallback
 
-## How to run locally
+## Important Elementor copy note
 
-Use any static server from the project folder:
+The **Copy to Elementor** button copies a plain text payload shaped like Elementor's native clipboard format:
 
-```bash
-python3 -m http.server 5173
+```json
+{
+  "type": "elementor",
+  "siteurl": "https://example.com/index.php?rest_route=/",
+  "elements": []
+}
 ```
 
-Then open:
+This matches the payload style copied by real Elementor sites. The app writes only `text/plain` to the clipboard because Elementor's paste handler expects raw clipboard text.
+
+For the most reliable cross-site paste, set `window.ELEMENTOR_SOURCE_SITEURL` to a real WordPress REST route from a WordPress site you control, for example:
+
+```html
+<script>
+  window.ELEMENTOR_SOURCE_SITEURL = 'https://your-wp-test-site.com/index.php?rest_route=/';
+</script>
+```
+
+Place that script before `app.js` in `index.html`.
+
+Static hosting on GitHub Pages or Vercel can copy the payload, but it is not a real WordPress REST endpoint. If your Elementor install validates the source URL or tries to import media from the source site, use a real WordPress source URL.
+
+## GitHub Pages
+
+Keep these files in the repository root:
 
 ```txt
-http://localhost:5173
+index.html
+styles.css
+app.js
+data/
+README.md
+vercel.json
 ```
 
-## How to deploy
+Then enable:
 
-### GitHub Pages
+```txt
+Settings → Pages → Deploy from a branch → main → /root
+```
 
-Upload the folder contents to a GitHub repository and enable GitHub Pages for the branch.
+## Vercel
 
-### Vercel
+Use static settings:
 
-Import the repository into Vercel. Since this is a static site, no framework preset is required.
+```txt
+Framework: Other
+Build command: empty
+Output directory: empty
+Install command: empty
+```
 
-## Elementor testing flow
+## Elementor test flow
 
-1. Install Elementor Free on a clean WordPress site.
-2. Use a compatible theme such as Hello Elementor, Astra, Kadence, GeneratePress, or Blocksy.
-3. Make sure Elementor flexbox containers are enabled.
-4. Click `Download JSON` for a hero.
-5. Import the JSON through Elementor templates or test your preferred JSON import flow.
-6. Use `Copy JSON` for clipboard-based workflows.
+1. Open the hosted library page.
+2. Click **Copy to Elementor**.
+3. Open a page in Elementor.
+4. Right-click inside the canvas.
+5. Choose **Paste from other site**.
+6. Press Ctrl/Cmd + V.
 
-## Important implementation note
+If paste fails, test with:
 
-Elementor's official cross-site paste feature expects Elementor-created clipboard data and also depends on Elementor version plus matching enabled features. This MVP therefore ships both copy-to-clipboard and download fallback. The JSON files use Elementor's documented structure with `title`, `type`, `version`, `page_settings`, and `content`, then containers and widgets inside the content array.
+- Elementor Free updated
+- Flexbox Containers enabled
+- Hello Elementor theme
+- No third-party Elementor addons
 
-## Widget whitelist used in this MVP
-
-- Container
-- Heading
-- Text Editor
-- Image
-- Video
-- Button
-- Icon Box
-- Icon List
-- Image Carousel
-- Counter
-- Testimonial
-- Social Icons
-- Google Maps
-
-## Next product step
-
-After testing the first 10 templates in a clean Elementor Free install, expand the `HEROES` array to 50 sections and add a compatibility badge for each widget set.
+The **Download JSON** button remains available for template import fallback.

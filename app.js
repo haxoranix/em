@@ -54,8 +54,8 @@ function render() {
         <div class="badges">${hero.widgets.slice(0,5).map(w => `<em>${w}</em>`).join('')}</div>
         <div class="card-actions">
           <button data-action="preview">Preview</button>
-          <button data-action="copy">Copy JSON</button>
-          <button data-action="download">Download</button>
+          <button data-action="copy">Copy to Elementor</button>
+          <button data-action="download">Download JSON</button>
         </div>
       </div>
     </article>`).join('');
@@ -80,21 +80,173 @@ function openPreview(hero) {
   modal.showModal();
 }
 
-async function copyJson(hero) {
-  const text = JSON.stringify(hero.template, null, 2);
-  try {
-    if (navigator.clipboard?.write) {
-      const blob = new Blob([text], {type: 'application/json'});
-      const plain = new Blob([text], {type: 'text/plain'});
-      await navigator.clipboard.write([new ClipboardItem({'text/plain': plain, 'application/json': blob})]);
-    } else {
-      await navigator.clipboard.writeText(text);
-    }
-    showToast(`${hero.name} JSON copied`);
-  } catch (error) {
-    await navigator.clipboard.writeText(text);
-    showToast(`${hero.name} JSON copied as text`);
+function deepClone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function emptyImage() {
+  return { url: '', id: '', size: '' };
+}
+
+function normalizeSizeBox(value, unit = 'px') {
+  if (value && typeof value === 'object') {
+    const next = { ...value };
+    if (!('unit' in next)) next.unit = unit;
+    if (!('sizes' in next)) next.sizes = [];
+    return next;
   }
+  return { unit, size: value || '', sizes: [] };
+}
+
+function normalizeGap(value) {
+  const next = normalizeSizeBox(value, 'px');
+  if (!('column' in next)) next.column = next.size !== undefined ? String(next.size) : '';
+  if (!('row' in next)) next.row = next.size !== undefined ? String(next.size) : '';
+  if (!('isLinked' in next)) next.isLinked = true;
+  return next;
+}
+
+function normalizeElementorSettings(settings = {}, element = {}, depth = 0) {
+  const s = { ...settings };
+
+  if (element.elType === 'container') {
+    s.container_type ??= 'flex';
+    s.content_width ??= depth === 0 ? 'boxed' : 'full';
+    s.flex_direction ??= depth === 0 ? 'row' : 'column';
+    s.flex_direction_tablet ??= depth === 0 ? 'column' : '';
+    s.flex_direction_mobile ??= '';
+    s.flex__is_row ??= 'row';
+    s.flex__is_column ??= 'column';
+
+    if (s.align_items && !s.flex_align_items) {
+      s.flex_align_items = s.align_items;
+      delete s.align_items;
+    }
+    if (s.justify_content && !s.flex_justify_content) {
+      s.flex_justify_content = s.justify_content;
+      delete s.justify_content;
+    }
+    if (s.flex_gap) s.flex_gap = normalizeGap(s.flex_gap);
+    if (s.custom_height && !s.min_height) s.min_height = s.custom_height;
+    if (s.html_tag === undefined) s.html_tag = '';
+
+    const imageKeys = [
+      'background_image', 'background_hover_image', 'background_overlay_image', 'background_overlay_hover_image',
+      'background_image_tablet', 'background_image_mobile', 'background_hover_image_tablet', 'background_hover_image_mobile',
+      'background_overlay_image_tablet', 'background_overlay_image_mobile', 'background_overlay_hover_image_tablet', 'background_overlay_hover_image_mobile'
+    ];
+    imageKeys.forEach(key => { if (!(key in s)) s[key] = emptyImage(); });
+
+    ['background_slideshow_gallery', 'background_hover_slideshow_gallery', 'background_overlay_slideshow_gallery', 'background_overlay_hover_slideshow_gallery'].forEach(key => {
+      if (!(key in s)) s[key] = [];
+    });
+
+    ['width', 'width_tablet', 'width_mobile', 'boxed_width', 'boxed_width_tablet', 'boxed_width_mobile', 'min_height_tablet', 'min_height_mobile'].forEach(key => {
+      if (!(key in s)) s[key] = { unit: key.includes('width') ? '%' : 'px', size: '', sizes: [] };
+    });
+
+    ['flex_gap_tablet', 'flex_gap_mobile'].forEach(key => { if (!(key in s)) s[key] = { column: '', row: '', isLinked: true, unit: 'px' }; });
+    ['margin', 'margin_tablet', 'margin_mobile', 'padding_tablet', 'padding_mobile'].forEach(key => {
+      if (!(key in s)) s[key] = { unit: 'px', top: '', right: '', bottom: '', left: '', isLinked: true };
+    });
+  }
+
+  if (element.elType === 'widget') {
+    ['_background_image', '_background_hover_image'].forEach(key => { if (!(key in s)) s[key] = emptyImage(); });
+    ['_background_slideshow_gallery', '_background_hover_slideshow_gallery'].forEach(key => { if (!(key in s)) s[key] = []; });
+    s._title ??= '';
+    ['_margin', '_margin_tablet', '_margin_mobile', '_padding', '_padding_tablet', '_padding_mobile'].forEach(key => {
+      if (!(key in s)) s[key] = { unit: 'px', top: '', right: '', bottom: '', left: '', isLinked: true };
+    });
+
+    if (element.widgetType === 'image') {
+      if (s.border_radius && !s.image_border_radius) {
+        s.image_border_radius = s.border_radius;
+        delete s.border_radius;
+      }
+      s.image_size ??= 'full';
+      s.align ??= 'left';
+      s.link_to ??= 'none';
+      s.caption_source ??= 'none';
+      s.open_lightbox ??= 'default';
+    }
+
+    if (element.widgetType === 'button') {
+      s.button_type ??= 'default';
+      s.size ??= 'sm';
+      s.selected_icon ??= { value: '', library: '' };
+      s.icon_align ??= 'left';
+      s.icon_indent ??= { unit: 'px', size: '', sizes: [] };
+    }
+
+    if (element.widgetType === 'heading') {
+      s.size ??= 'default';
+      s.header_size ??= 'h2';
+      s.link ??= { url: '', is_external: '', nofollow: '', custom_attributes: '' };
+    }
+  }
+
+  return s;
+}
+
+function normalizeElementorElement(element, depth = 0) {
+  const e = deepClone(element);
+  e.id = e.id || Math.random().toString(16).slice(2, 9);
+  e.isLocked = false;
+  e.isInner = e.elType === 'container' ? depth > 0 : false;
+  e.settings = normalizeElementorSettings(e.settings || {}, e, depth);
+  e.elements = Array.isArray(e.elements) ? e.elements.map(child => normalizeElementorElement(child, depth + 1)) : [];
+  e.defaultEditSettings = e.defaultEditSettings || { defaultEditRoute: 'content' };
+
+  if (e.elType === 'container') {
+    e.editSettings = e.editSettings || { defaultEditRoute: 'layout', panel: { activeTab: 'layout', activeSection: 'section_layout' } };
+    e.htmlCache = null;
+  }
+
+  if (e.elType === 'widget') {
+    e.editSettings = e.editSettings || { defaultEditRoute: 'content' };
+    e.htmlCache = e.htmlCache || '';
+  }
+
+  return e;
+}
+
+function getElementorSourceSiteUrl() {
+  const configured = window.ELEMENTOR_SOURCE_SITEURL || '';
+  if (configured) return configured;
+
+  const path = window.location.pathname.endsWith('/')
+    ? window.location.pathname
+    : window.location.pathname.replace(/\/[^/]*$/, '/');
+
+  return `${window.location.origin}${path}index.php?rest_route=/`;
+}
+
+function getElementorClipboardPayload(hero) {
+  return {
+    type: 'elementor',
+    siteurl: getElementorSourceSiteUrl(),
+    elements: hero.template.content.map(element => normalizeElementorElement(element))
+  };
+}
+
+async function copyToElementor(hero) {
+  const payload = getElementorClipboardPayload(hero);
+  const text = JSON.stringify(payload);
+
+  try {
+    // Elementor reads the plain text clipboard payload. Do not write text/html here.
+    await navigator.clipboard.writeText(text);
+    showToast(`${hero.name} copied. Use Paste from other site in Elementor.`);
+  } catch (error) {
+    showToast('Clipboard permission failed. Use Download JSON as fallback.');
+  }
+}
+
+async function copyTemplateJson(hero) {
+  const text = JSON.stringify(hero.template, null, 2);
+  await navigator.clipboard.writeText(text);
+  showToast(`${hero.name} template JSON copied`);
 }
 
 function downloadJson(hero) {
@@ -123,7 +275,7 @@ gallery.addEventListener('click', event => {
   if (!button || !card) return;
   const hero = HEROES.find(h => h.id === card.dataset.id);
   if (button.dataset.action === 'preview') openPreview(hero);
-  if (button.dataset.action === 'copy') copyJson(hero);
+  if (button.dataset.action === 'copy') copyToElementor(hero);
   if (button.dataset.action === 'download') downloadJson(hero);
 });
 
@@ -133,7 +285,7 @@ modal.addEventListener('click', event => {
     viewportMode = event.target.dataset.viewport;
     setModalWidth();
   }
-  if (event.target.dataset.modalCopy !== undefined) copyJson(activeHero);
+  if (event.target.dataset.modalCopy !== undefined) copyToElementor(activeHero);
   if (event.target.dataset.modalDownload !== undefined) downloadJson(activeHero);
 });
 
