@@ -1,0 +1,270 @@
+{
+  "title": "Course Launch Video",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "673bd475",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "height": "min-height",
+        "custom_height": {
+          "unit": "vh",
+          "size": 82,
+          "sizes": []
+        },
+        "content_position": "middle",
+        "html_tag": "section",
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1180,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_gap": {
+          "unit": "px",
+          "size": 40,
+          "sizes": []
+        },
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "24",
+          "bottom": "90",
+          "left": "24",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#f8fafc"
+      },
+      "elements": [
+        {
+          "id": "6a68f812",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 48,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "11a11f51",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Teach one skill. Sell it beautifully.",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#111827",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 56,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.05,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "25227c37",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>A course launch hero with video placement, proof bullets, and a crisp call to action.</p>",
+                "align": "left",
+                "text_color": "#475569",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.65,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "12da86a7",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Join the waitlist",
+                "align": "left",
+                "link": {
+                  "url": "#",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "button_text_color": "#ffffff",
+                "background_color": "#4f46e5",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "999",
+                  "right": "999",
+                  "bottom": "999",
+                  "left": "999",
+                  "isLinked": false
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "24",
+                  "bottom": "16",
+                  "left": "24",
+                  "isLinked": false
+                },
+                "typography_typography": "custom",
+                "typography_font_weight": "700"
+              },
+              "elements": []
+            },
+            {
+              "id": "34833489",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "Beginner friendly",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "8c49ea2"
+                  },
+                  {
+                    "text": "6-week learning path",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "e32684b"
+                  },
+                  {
+                    "text": "Certificate ready",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "7b95e90"
+                  }
+                ],
+                "icon_color": "#111827",
+                "text_color": "#111827",
+                "space_between": {
+                  "unit": "px",
+                  "size": 10,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "4d419b1b",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 52,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "d810a485",
+              "elType": "widget",
+              "widgetType": "video",
+              "isInner": false,
+              "settings": {
+                "video_type": "youtube",
+                "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              },
+              "elements": []
+            },
+            {
+              "id": "ed03241b",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image": {
+                  "url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                  "id": "",
+                  "size": "full",
+                  "alt": "Online course",
+                  "source": "library"
+                },
+                "image_size": "full",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "28",
+                  "bottom": "28",
+                  "left": "28",
+                  "isLinked": false
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

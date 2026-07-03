@@ -1,0 +1,218 @@
+{
+  "title": "Warm Agency Studio",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "cbee3772",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "height": "min-height",
+        "custom_height": {
+          "unit": "vh",
+          "size": 82,
+          "sizes": []
+        },
+        "content_position": "middle",
+        "html_tag": "section",
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1180,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_gap": {
+          "unit": "px",
+          "size": 40,
+          "sizes": []
+        },
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "24",
+          "bottom": "90",
+          "left": "24",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#fff7ed"
+      },
+      "elements": [
+        {
+          "id": "50af03b9",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 55,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "b74f2134",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "A studio hero that feels expensive, not complicated.",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#111827",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 56,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.05,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "5d2cce80",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>For agencies selling brand, web, and growth retainers. Big typography, warm cards, and trust signals.</p>",
+                "align": "left",
+                "text_color": "#4b5563",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.65,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "38a39d5e",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Book a strategy call",
+                "align": "left",
+                "link": {
+                  "url": "#",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "button_text_color": "#ffffff",
+                "background_color": "#111827",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "999",
+                  "right": "999",
+                  "bottom": "999",
+                  "left": "999",
+                  "isLinked": false
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "24",
+                  "bottom": "16",
+                  "left": "24",
+                  "isLinked": false
+                },
+                "typography_typography": "custom",
+                "typography_font_weight": "700"
+              },
+              "elements": []
+            },
+            {
+              "id": "0853964b",
+              "elType": "widget",
+              "widgetType": "icon-box",
+              "isInner": false,
+              "settings": {
+                "selected_icon": {
+                  "value": "fas fa-bolt",
+                  "library": "fa-solid"
+                },
+                "title_text": "Fast setup",
+                "description_text": "Paste the JSON, switch images, edit copy.",
+                "primary_color": "#f97316",
+                "title_color": "#111827",
+                "description_color": "#6b7280",
+                "position": "left"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "4f58d669",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 45,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "71722f24",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image": {
+                  "url": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+                  "id": "",
+                  "size": "full",
+                  "alt": "Agency team",
+                  "source": "library"
+                },
+                "image_size": "full",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "28",
+                  "bottom": "28",
+                  "left": "28",
+                  "isLinked": false
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

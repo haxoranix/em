@@ -1,0 +1,232 @@
+{
+  "title": "AI Command Center",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "e9df4696",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "height": "min-height",
+        "custom_height": {
+          "unit": "vh",
+          "size": 86,
+          "sizes": []
+        },
+        "content_position": "middle",
+        "html_tag": "section",
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1180,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_gap": {
+          "unit": "px",
+          "size": 40,
+          "sizes": []
+        },
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "24",
+          "bottom": "90",
+          "left": "24",
+          "isLinked": false
+        },
+        "background_background": "gradient",
+        "background_color": "#020617",
+        "background_color_b": "#172554",
+        "background_gradient_type": "linear",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 135,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "d58e72e3",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 50,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "a0770217",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Turn scattered data into decisions.",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#e0f2fe",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 60,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.05,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "21a278f6",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>A modern AI product hero with counters and a high contrast command center feel.</p>",
+                "align": "left",
+                "text_color": "#bae6fd",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.65,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "4f7fd633",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Explore platform",
+                "align": "left",
+                "link": {
+                  "url": "#",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "button_text_color": "#02111f",
+                "background_color": "#06b6d4",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "999",
+                  "right": "999",
+                  "bottom": "999",
+                  "left": "999",
+                  "isLinked": false
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "24",
+                  "bottom": "16",
+                  "left": "24",
+                  "isLinked": false
+                },
+                "typography_typography": "custom",
+                "typography_font_weight": "700"
+              },
+              "elements": []
+            },
+            {
+              "id": "dbdde131",
+              "elType": "widget",
+              "widgetType": "counter",
+              "isInner": false,
+              "settings": {
+                "ending_number": 12,
+                "title": "Automated workflows",
+                "number_color": "#67e8f9",
+                "title_color": "#6b7280"
+              },
+              "elements": []
+            },
+            {
+              "id": "ca3766e4",
+              "elType": "widget",
+              "widgetType": "counter",
+              "isInner": false,
+              "settings": {
+                "ending_number": 98,
+                "title": "Client satisfaction",
+                "number_color": "#67e8f9",
+                "title_color": "#6b7280"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "6c15c0c8",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 50,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "10275dff",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image": {
+                  "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+                  "id": "",
+                  "size": "full",
+                  "alt": "AI product",
+                  "source": "library"
+                },
+                "image_size": "full",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "28",
+                  "bottom": "28",
+                  "left": "28",
+                  "isLinked": false
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

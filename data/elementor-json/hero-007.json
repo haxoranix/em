@@ -1,0 +1,264 @@
+{
+  "title": "Mobile App Carousel",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "b8a88062",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "height": "min-height",
+        "custom_height": {
+          "unit": "vh",
+          "size": 84,
+          "sizes": []
+        },
+        "content_position": "middle",
+        "html_tag": "section",
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1180,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_gap": {
+          "unit": "px",
+          "size": 40,
+          "sizes": []
+        },
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "24",
+          "bottom": "90",
+          "left": "24",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#eef2ff"
+      },
+      "elements": [
+        {
+          "id": "e4d58fed",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 48,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "6eaac8d8",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "One app for calmer daily planning.",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#111827",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 56,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.05,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "2f01b721",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>A consumer app hero with carousel imagery, app benefits, and strong download CTA.</p>",
+                "align": "left",
+                "text_color": "#4b5563",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.65,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "0760474f",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Download beta",
+                "align": "left",
+                "link": {
+                  "url": "#",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "button_text_color": "#ffffff",
+                "background_color": "#6366f1",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "999",
+                  "right": "999",
+                  "bottom": "999",
+                  "left": "999",
+                  "isLinked": false
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "24",
+                  "bottom": "16",
+                  "left": "24",
+                  "isLinked": false
+                },
+                "typography_typography": "custom",
+                "typography_font_weight": "700"
+              },
+              "elements": []
+            },
+            {
+              "id": "2a0df3db",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "Focus mode",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "36e8b53"
+                  },
+                  {
+                    "text": "Shared lists",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "9309cc6"
+                  },
+                  {
+                    "text": "Gentle reminders",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "73931bd"
+                  }
+                ],
+                "icon_color": "#111827",
+                "text_color": "#111827",
+                "space_between": {
+                  "unit": "px",
+                  "size": 10,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "ca0fa5f6",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 52,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "8a728e7e",
+              "elType": "widget",
+              "widgetType": "image-carousel",
+              "isInner": false,
+              "settings": {
+                "carousel": [
+                  {
+                    "id": "",
+                    "url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                  }
+                ],
+                "slides_to_show": "1",
+                "navigation": "dots",
+                "image_spacing_custom": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

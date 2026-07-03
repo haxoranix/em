@@ -1,0 +1,266 @@
+{
+  "title": "Nova SaaS Gradient",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "e48478dc",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "height": "min-height",
+        "custom_height": {
+          "unit": "vh",
+          "size": 86,
+          "sizes": []
+        },
+        "content_position": "middle",
+        "html_tag": "section",
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1180,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_gap": {
+          "unit": "px",
+          "size": 40,
+          "sizes": []
+        },
+        "padding": {
+          "unit": "px",
+          "top": "90",
+          "right": "24",
+          "bottom": "90",
+          "left": "24",
+          "isLinked": false
+        },
+        "background_background": "gradient",
+        "background_color": "#080b1f",
+        "background_color_b": "#151242",
+        "background_gradient_type": "linear",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 135,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "b682575e",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 52,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "30877432",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Launch your product site before the next sprint.",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 58,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.05,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "d1026706",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "<p>A clean SaaS hero with sharp copy, feature bullets, and a dashboard visual built from Elementor Free widgets.</p>",
+                "align": "left",
+                "text_color": "#c7d2fe",
+                "typography_typography": "custom",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.65,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "d7e805da",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Start free",
+                "align": "left",
+                "link": {
+                  "url": "#",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "button_text_color": "#ffffff",
+                "background_color": "#8b5cf6",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "999",
+                  "right": "999",
+                  "bottom": "999",
+                  "left": "999",
+                  "isLinked": false
+                },
+                "text_padding": {
+                  "unit": "px",
+                  "top": "16",
+                  "right": "24",
+                  "bottom": "16",
+                  "left": "24",
+                  "isLinked": false
+                },
+                "typography_typography": "custom",
+                "typography_font_weight": "700"
+              },
+              "elements": []
+            },
+            {
+              "id": "73c8eb5b",
+              "elType": "widget",
+              "widgetType": "icon-list",
+              "isInner": false,
+              "settings": {
+                "icon_list": [
+                  {
+                    "text": "No code handoff",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "846a32c"
+                  },
+                  {
+                    "text": "Responsive container layout",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "bb81e3c"
+                  },
+                  {
+                    "text": "Built for Elementor Free",
+                    "selected_icon": {
+                      "value": "fas fa-check",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "_id": "9b62179"
+                  }
+                ],
+                "icon_color": "#ffffff",
+                "text_color": "#ffffff",
+                "space_between": {
+                  "unit": "px",
+                  "size": 10,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "c826a6fc",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "width": {
+              "unit": "%",
+              "size": 48,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap": {
+              "unit": "px",
+              "size": 16,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "c87a171a",
+              "elType": "widget",
+              "widgetType": "image",
+              "isInner": false,
+              "settings": {
+                "image": {
+                  "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
+                  "id": "",
+                  "size": "full",
+                  "alt": "SaaS dashboard",
+                  "source": "library"
+                },
+                "image_size": "full",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "28",
+                  "right": "28",
+                  "bottom": "28",
+                  "left": "28",
+                  "isLinked": false
+                }
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
